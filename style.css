@@ -1,0 +1,63 @@
+body {
+    background-color: aquamarine;
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: #fff200;
+    color: black;
+    font-family: sans-serif;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    text-align: center;
+    opacity: 0;
+    transform: translate(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
+    border-radius: 9px;
+    box-shadow: 4px 4px 0px grba(0, 0, 0, 0.0);
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff200 transparent transparent transparent;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+}
+
+button {
+    font-family: sans-serif;
+    background-color: #ff0700;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 4px 4px 0 black;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #ffc107;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 0 black;
+}
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 2px 2px 0 black;
+}
